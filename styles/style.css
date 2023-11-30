@@ -66,19 +66,21 @@ video {
 }
 
 .result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-self: flex-end;
 }
 
 .result__video-container {
   position: relative;
-  inline-size: 711px;
-  padding: 0 0 16px;
+  width: 711px;
+  height: 386px;
 }
 
 .result__video {
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
   object-position: center;
 }
@@ -219,7 +221,7 @@ video {
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
-  line-height: 94%; /* 70.5px */
+  line-height: 0.94; /* 70.5px */
   text-transform: uppercase;
 }
 
@@ -246,6 +248,10 @@ video {
   margin: 2px;
   text-decoration: none;
   color: #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:hover {
